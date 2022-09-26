@@ -14,6 +14,8 @@ public class idGEN {
         //Generate random int value from 0 to 9 for the Inventory Values
         ID_random_num = (int)Math.floor(Math.random()*(ID_max-ID_min+1)+ID_min);
 
+        //test test
+
     }
 
 }

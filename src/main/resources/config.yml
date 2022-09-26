@@ -14,5 +14,27 @@
 #M::::::M               M::::::M   CC:::::::::::::::C                    CC:::::::::::::::C  A:::::A               A:::::A  P::::::::P                T:::::::::T        CC:::::::::::::::CH:::::::H     H:::::::H  A:::::A               A:::::A
 #M::::::M               M::::::M     CCC::::::::::::C                      CCC::::::::::::C A:::::A                 A:::::A P::::::::P                T:::::::::T          CCC::::::::::::CH:::::::H     H:::::::H A:::::A                 A:::::A
 #MMMMMMMM               MMMMMMMM        CCCCCCCCCCCCC                         CCCCCCCCCCCCCAAAAAAA                   AAAAAAAPPPPPPPPPP                TTTTTTTTTTT             CCCCCCCCCCCCCHHHHHHHHH     HHHHHHHHHAAAAAAA                   AAAAAAA
+
+##	+-----------------------------------+-----------------------------------+
+##	|                                                                       |
+##	|                            MC CAPTCHA                                 |
+##	|                                                                       |
+##	| Copyright (c) 2020-2022, SparksTheFolf <sparks@wuffs.net>             |
+##	|                                                                       |
+##	| This program is free software: you can redistribute it and/or modify  |
+##	| it under the terms of the GNU General Public License as published by  |
+##	| the Free Software Foundation, either version 3 of the License, or     |
+##	| (at your option) any later version.                                   |
+##	|                                                                       |
+##	| This program is distributed in the hope that it will be useful,       |
+##	| but WITHOUT ANY WARRANTY; without even the implied warranty of        |
+##	| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         |
+##	| GNU General Public License for more details.                          |
+##	|                                                                       |
+##	| You should have received a copy of the GNU General Public License     |
+##	| along with this program. If not, see <http://www.gnu.org/licenses/>.  |
+##	|                                                                       |
+##	+-----------------------------------------------------------------------+
+
 License: '' # Key Example: XXXX-XXXX-XXXX-XXXX
 Plugin-Name-Server: 'MC-CAPTCHA' # Do NOT change, unless you know what you are doing!!

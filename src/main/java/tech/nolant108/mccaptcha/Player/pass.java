@@ -14,7 +14,6 @@ public class pass {
         System.out.println(player.getDisplayName() + " has the CAPTCHA value of: " + captcha.CAPTCHA_random_num + " , and PASSED ; With ID Number of: " + pUUID.uuid);
         player.sendMessage(ChatColor.GREEN + "Successful! You have passed, Welcome!");
         player.closeInventory();
-
     }
 
 }

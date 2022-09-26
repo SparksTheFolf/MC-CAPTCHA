@@ -8,6 +8,7 @@ public class pUUID {
     public static UUID uuid;
 
 
+    // Random id gen
     public static void uuidGEN(){
         uuid = UUID.randomUUID();
     }
