@@ -44,7 +44,6 @@ public class playerJoin implements Listener {
 
         //Generate random int value from 0 to 9 for the Inventory Values
         CAPTCHA_random_num = (int)Math.floor(Math.random()*(max-min+1)+min);
-        System.out.println("Random value: " + CAPTCHA_random_num);
 
 
         Player player = e.getPlayer();

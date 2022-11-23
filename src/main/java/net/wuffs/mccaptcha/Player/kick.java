@@ -12,7 +12,6 @@ public class kick {
 
         if(!playerJoin.complete) {
 
-            System.out.println(player.getDisplayName() + " has the CAPTCHA value of: " + playerJoin.CAPTCHA_random_num + " , and FAILED ; With ID Number of: " + pUUID.uuid);
             player.kickPlayer("Failure to complete CAPTCHA!"
                     + "\n" + "Please rejoin to try again!"
                     + "\n" + "If you believe this is a mistake: https://captcha.wuffs.net/?id=" + pUUID.uuid);
