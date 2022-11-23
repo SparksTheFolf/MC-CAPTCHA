@@ -25,6 +25,10 @@ public class playerJoin implements Listener {
     String delayFunc = this.config.getString("Delay");
     public static boolean complete;
 
+    public static int CAPTCHA_random_num;
+    public static int min;
+    public static int max;
+
 
 
 
@@ -35,23 +39,30 @@ public class playerJoin implements Listener {
 
     @EventHandler
     public void Join(PlayerJoinEvent e) throws InterruptedException {
+        min = 1;
+        max = 8;
+
+        //Generate random int value from 0 to 9 for the Inventory Values
+        CAPTCHA_random_num = (int)Math.floor(Math.random()*(max-min+1)+min);
+        System.out.println("Random value: " + CAPTCHA_random_num);
+
 
         Player player = e.getPlayer();
-      //  idGEN.numGen();
+        inventory.CPAInvis((Player) player);
+
         pUUID.uuidGEN();
 
         //CAST THE PLAYER METHOD
         complete = false;
         player.sendMessage(ChatColor.YELLOW + "You have 15 seconds to complete the CAPTCHA!");
         player.sendMessage(ChatColor.YELLOW + "Your CAPTCHA ID number is: " + pUUID.uuid);
-        inventory.CPAInvis((Player) player);
 
         new BukkitRunnable(){
             @Override
             public void run() {
                 kick.kick(player);
             }
-        }.runTaskLater(main, 20*20);
+        }.runTaskLater(main, 15*20);
 
     }
 
@@ -71,10 +82,11 @@ public class playerJoin implements Listener {
                         break;
                     case GREEN_CONCRETE:
                         pass.pass(player);
+                        complete = true;
 
                         break;
                     default:
-                        return;
+                        break;
 
 
                 }

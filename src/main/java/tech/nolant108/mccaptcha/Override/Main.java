@@ -6,7 +6,7 @@ import tech.nolant108.mccaptcha.CAPTCHA.playerJoin;
 
 public final class Main extends JavaPlugin {
 
-    int version = 100421;
+    int version = 112222;
     public static boolean testMode = true;  //TODO: WHEN GOING TO PROD SERVER CHANGE TO FALSE!!!
     public static Main plugin;
 
@@ -28,7 +28,7 @@ public final class Main extends JavaPlugin {
 
             String PluginValidServerName = this.getConfig().getString("Plugin-Name-Server");
 
-            if(!new AdvancedLicense(licence, AdvancedLicense.ValidationServer + AdvancedLicense.EndValidServer, this).register());
+            new AdvancedLicense(licence, AdvancedLicense.ValidationServer + AdvancedLicense.EndValidServer, this).register();
 
 
         }else{
@@ -51,6 +51,10 @@ public final class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+
+        saveDefaultConfig();
+
+
         System.out.println("CAPTCHA is DISABLED");
 
     }

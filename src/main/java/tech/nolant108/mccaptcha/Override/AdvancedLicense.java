@@ -35,16 +35,16 @@ public class AdvancedLicense {
 	public static String PublicPluginNameServer = ""; //Change When Using a new Plugin
 
 
-	private String licenseKey;
+	private final String licenseKey;
 	public static Plugin plugin;
-	private String validationServer;
+	private final String validationServer;
 	private LogType logType = LogType.NORMAL;
 	private String securityKey = "YecoF0I6M05thxLeokoHuW8iUhTdIUInjkfF";
 	private boolean debug = false;
 
 	public AdvancedLicense(String licenseKey, String validationServer, Plugin plugin) {
 		this.licenseKey = licenseKey;
-		this.plugin = plugin;
+		AdvancedLicense.plugin = plugin;
 		this.validationServer = validationServer;
 	}
 

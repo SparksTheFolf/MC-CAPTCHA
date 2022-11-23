@@ -38,3 +38,4 @@
 
 License: '' # Key Example: XXXX-XXXX-XXXX-XXXX
 Plugin-Name-Server: 'MC-CAPTCHA' # Do NOT change, unless you know what you are doing!!
+Pass-Text: 'This is an example text, You can change this' # Text to display when the player passes the captcha
