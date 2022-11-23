@@ -30,8 +30,8 @@ public class AdvancedLicense {
 
 
 	//Modifiers
-	public static String ValidationServer = "http://minecraft-webclient-auth.nolant108.tech";
-	public static String EndValidServer = "/webpanel/verify.php";
+	public static String ValidationServer = "https://captcha.wuffs.net";
+	public static String EndValidServer = "/verify.php";
 	public static String PublicPluginNameServer = ""; //Change When Using a new Plugin
 
 
@@ -65,8 +65,8 @@ public class AdvancedLicense {
 
 	public boolean register() {
 		log(0, "[]==========[MWCA License-System]==========[]");
-		log(0, "Connecting to Nolant108 MWC Auth License-Server...");
-		log(0, "Connected to Nolant108 MWC Auth Server...");
+		log(0, "Connecting to Captcha MWC Auth License-Server...");
+		log(0, "Connected to Captcha MWC Auth Server...");
 		log(0, "License Key for: " + PublicPluginNameServer);
 		log(0, "Checking License Key...");
 		ValidationType vt = isValid();

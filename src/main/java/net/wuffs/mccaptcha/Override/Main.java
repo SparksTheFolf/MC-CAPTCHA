@@ -42,53 +42,28 @@ public final class Main extends JavaPlugin {
 
 
 
-        }else if (!Objects.equals(licence, "L0ZD-HO0A-N6PZ-D5WB")) {
+        }else {
 
-            try {
-                if (testMode) {
-                    System.out.println("If test mode is enabled, please disable this before going to production!");
-                }
+            try{
+                String ValidationServer = this.getConfig().getString("Validation-Server");
+
+
+                String PluginValidServerName = this.getConfig().getString("Plugin-Name-Server");
+
+                //new AdvancedLicense(licence, AdvancedLicense.ValidationServer + AdvancedLicense.EndValidServer, this).register();
+
+
+                if(!new AdvancedLicense(licence, AdvancedLicense.ValidationServer + AdvancedLicense.EndValidServer, this).register()) return;
+
+                System.out.println("Thank you for using the enterprise edition of MCCaptcha!");
+
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println("License is invalid or typed in wrong! Please check your license and try again!");
             }
 
-            String ValidationServer = this.getConfig().getString("Validation-Server");
-
-
-            String PluginValidServerName = this.getConfig().getString("Plugin-Name-Server");
-
-            new AdvancedLicense(licence, AdvancedLicense.ValidationServer + AdvancedLicense.EndValidServer, this).register();
-
-
-            System.out.println("Thank you for using enterprise edition of MCCaptcha!");
         }
 
 
-
-    /*
-        if(!testMode){
-
-            String ValidationServer = this.getConfig().getString("Validation-Server");
-
-
-            String PluginValidServerName = this.getConfig().getString("Plugin-Name-Server");
-
-            new AdvancedLicense(licence, AdvancedLicense.ValidationServer + AdvancedLicense.EndValidServer, this).register();
-
-
-        }else{
-
-            System.out.println("[]===========TESTING MODE==========[]");
-            System.out.println("[ The Plugin will make NO attempt   ]");
-            System.out.println("[ To Contact the licensing server!! ]");
-            System.out.println("[ For AUTH, Disable testing mode!   ]");
-            System.out.println("[]===========TESTING MODE==========[]");
-
-
-        }
-
-
-     */
 
         Bukkit.getPluginManager().registerEvents(new playerJoin(this), this);
 
