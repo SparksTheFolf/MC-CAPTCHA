@@ -36,6 +36,5 @@
 ##	|                                                                       |
 ##	+-----------------------------------------------------------------------+
 
-License: '' # Key Example: XXXX-XXXX-XXXX-XXXX
+License: 'L0ZD-HO0A-N6PZ-D5WB' # (CHANGE ONLY IF A ENTERPRISE LICENCE KEY IS USED, OTHERWISE KEEP THE CURRENT KEY) Key Example: XXXX-XXXX-XXXX-XXXX or L0ZD-HO0A-N6PZ-D5WB
 Plugin-Name-Server: 'MC-CAPTCHA' # Do NOT change, unless you know what you are doing!!
-Pass-Text: 'This is an example text, You can change this' # Text to display when the player passes the captcha

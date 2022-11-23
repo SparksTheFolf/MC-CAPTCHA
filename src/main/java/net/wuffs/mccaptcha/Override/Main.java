@@ -4,6 +4,8 @@ import net.wuffs.mccaptcha.CAPTCHA.playerJoin;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
+
 public final class Main extends JavaPlugin {
 
     int version = 112222;
@@ -19,10 +21,53 @@ public final class Main extends JavaPlugin {
         saveDefaultConfig();
         plugin = this;
 
+        String licence = this.getConfig().getString("License");
 
+        String regularLicense = "L0ZD-HO0A-N6PZ-D5WB";
+
+        if(Objects.equals(licence, regularLicense)) {
+
+            System.out.println("[]===============[MWCA License-System]===============[]");
+            System.out.println("Thank you for using basic MCCaptcha! \n");
+
+            System.out.println("Perks of buying the enterprise license: \n" +
+                    "1. No more CAPTCHA's for staff members\n" +
+                    "2. No more CAPTCHA's for players with a permission node\n" +
+                    "3. No more CAPTCHA's for players with a certain rank\n" +
+                    "4. CAPTCHA's UUID's get uploaded to the webserver for quick diagnostic of why the player was kicked\n"
+            );
+
+            System.out.println("To buy the enterprise edition of MCCaptcha, please visit: https://captcha.wuffs.net/enterprise");
+            System.out.println("[]===============[MWCA License-System]===============[]");
+
+
+
+        }else if (!Objects.equals(licence, "L0ZD-HO0A-N6PZ-D5WB")) {
+
+            try {
+                if (testMode) {
+                    System.out.println("If test mode is enabled, please disable this before going to production!");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            String ValidationServer = this.getConfig().getString("Validation-Server");
+
+
+            String PluginValidServerName = this.getConfig().getString("Plugin-Name-Server");
+
+            new AdvancedLicense(licence, AdvancedLicense.ValidationServer + AdvancedLicense.EndValidServer, this).register();
+
+
+            System.out.println("Thank you for using enterprise edition of MCCaptcha!");
+        }
+
+
+
+    /*
         if(!testMode){
 
-            String licence = this.getConfig().getString("License");
             String ValidationServer = this.getConfig().getString("Validation-Server");
 
 
@@ -41,6 +86,9 @@ public final class Main extends JavaPlugin {
 
 
         }
+
+
+     */
 
         Bukkit.getPluginManager().registerEvents(new playerJoin(this), this);
 

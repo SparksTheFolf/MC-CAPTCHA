@@ -1,7 +1,7 @@
 name: MC-CAPTCHA
 version: 1.0-ALPHA-SNAPSHOT
-main: tech.nolant108.mccaptcha.Override.Main
+main: net.wuffs.mccaptcha.Override.Main
 api-version: 1.16
 authors: [ SparksTheFolf ]
 description: MC-CAPTCHA authentication for Public and Private Servers
-website: nolant108.tech
+website: wuffs.net
