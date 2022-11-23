@@ -1,8 +1,8 @@
-package tech.nolant108.mccaptcha.Override;
+package net.wuffs.mccaptcha.Override;
 
+import net.wuffs.mccaptcha.CAPTCHA.playerJoin;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import tech.nolant108.mccaptcha.CAPTCHA.playerJoin;
 
 public final class Main extends JavaPlugin {
 

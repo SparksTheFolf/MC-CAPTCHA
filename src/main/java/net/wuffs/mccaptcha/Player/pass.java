@@ -1,14 +1,9 @@
-package tech.nolant108.mccaptcha.Player;
+package net.wuffs.mccaptcha.Player;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import tech.nolant108.mccaptcha.CAPTCHA.playerJoin;
-import  tech.nolant108.mccaptcha.Override.Main;
-
-import java.util.Set;
-
-import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.entity.Player;
+import net.wuffs.mccaptcha.CAPTCHA.playerJoin;
+import net.wuffs.mccaptcha.Override.Main;
 
 
 public class pass {

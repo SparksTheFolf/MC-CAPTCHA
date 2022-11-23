@@ -1,4 +1,4 @@
-package tech.nolant108.mccaptcha.CAPTCHA;
+package net.wuffs.mccaptcha.CAPTCHA;
 
 public class idGEN {
 

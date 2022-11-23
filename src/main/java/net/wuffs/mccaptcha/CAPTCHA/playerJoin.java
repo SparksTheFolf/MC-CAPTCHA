@@ -1,5 +1,7 @@
-package tech.nolant108.mccaptcha.CAPTCHA;
+package net.wuffs.mccaptcha.CAPTCHA;
 
+import net.wuffs.mccaptcha.Player.kick;
+import net.wuffs.mccaptcha.Player.pass;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -8,10 +10,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.scheduler.BukkitRunnable;
-import tech.nolant108.mccaptcha.Override.Main;
-import tech.nolant108.mccaptcha.Player.kick;
-import tech.nolant108.mccaptcha.Player.pUUID;
-import tech.nolant108.mccaptcha.Player.pass;
+import net.wuffs.mccaptcha.Override.Main;
+import net.wuffs.mccaptcha.Player.pUUID;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

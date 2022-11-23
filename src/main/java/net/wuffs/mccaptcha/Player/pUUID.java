@@ -1,4 +1,4 @@
-package tech.nolant108.mccaptcha.Player;
+package net.wuffs.mccaptcha.Player;
 
 import java.util.UUID;
 

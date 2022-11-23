@@ -1,4 +1,4 @@
-package tech.nolant108.mccaptcha.CAPTCHA;
+package net.wuffs.mccaptcha.CAPTCHA;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

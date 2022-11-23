@@ -1,4 +1,4 @@
-package tech.nolant108.mccaptcha.Override;
+package net.wuffs.mccaptcha.Override;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;

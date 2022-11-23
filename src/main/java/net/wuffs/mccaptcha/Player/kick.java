@@ -1,8 +1,8 @@
-package tech.nolant108.mccaptcha.Player;
+package net.wuffs.mccaptcha.Player;
 
 import org.bukkit.entity.Player;
-import tech.nolant108.mccaptcha.CAPTCHA.playerJoin;
-import tech.nolant108.mccaptcha.Override.Main;
+import net.wuffs.mccaptcha.CAPTCHA.playerJoin;
+import net.wuffs.mccaptcha.Override.Main;
 
 public class kick {
 
