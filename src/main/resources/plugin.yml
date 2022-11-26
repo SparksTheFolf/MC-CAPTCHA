@@ -4,4 +4,4 @@ main: net.wuffs.mccaptcha.Override.Main
 api-version: 1.16
 authors: [ SparksTheFolf ]
 description: MC-CAPTCHA authentication for Public and Private Servers
-website: wuffs.net
+website: https://captcha.wuffs.net

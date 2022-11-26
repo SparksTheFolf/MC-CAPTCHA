@@ -3,7 +3,6 @@ package net.wuffs.mccaptcha.Override;
 import net.wuffs.mccaptcha.CAPTCHA.playerJoin;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-
 import java.util.Objects;
 
 public final class Main extends JavaPlugin {
@@ -11,6 +10,8 @@ public final class Main extends JavaPlugin {
     int version = 112222;
     public static boolean testMode = true;  //TODO: WHEN GOING TO PROD SERVER CHANGE TO FALSE!!!
     public static Main plugin;
+
+    public static boolean enterprisemode;
 
     @Override
     public void onEnable() {
@@ -40,7 +41,7 @@ public final class Main extends JavaPlugin {
             System.out.println("To buy the enterprise edition of MCCaptcha, please visit: https://captcha.wuffs.net/enterprise");
             System.out.println("[]===============[MWCA License-System]===============[]");
 
-
+            enterprisemode = false;
 
         }else {
 
@@ -56,6 +57,8 @@ public final class Main extends JavaPlugin {
                 if(!new AdvancedLicense(licence, AdvancedLicense.ValidationServer + AdvancedLicense.EndValidServer, this).register()) return;
 
                 System.out.println("Thank you for using the enterprise edition of MCCaptcha!");
+
+                enterprisemode = true;
 
             } catch (Exception e) {
                 System.out.println("License is invalid or typed in wrong! Please check your license and try again!");

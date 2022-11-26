@@ -13,8 +13,11 @@ import org.bukkit.scheduler.BukkitRunnable;
 import net.wuffs.mccaptcha.Override.Main;
 import net.wuffs.mccaptcha.Player.pUUID;
 
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.URISyntaxException;
+
+import static net.wuffs.mccaptcha.Override.Main.enterprisemode;
 
 public class playerJoin implements Listener {
 
@@ -38,7 +41,7 @@ public class playerJoin implements Listener {
     public playerJoin(Main main){ this.main = main; }
 
     @EventHandler
-    public void Join(PlayerJoinEvent e) throws InterruptedException {
+    public void Join(PlayerJoinEvent e) throws InterruptedException{
         min = 1;
         max = 8;
 
@@ -54,8 +57,18 @@ public class playerJoin implements Listener {
         //CAST THE PLAYER METHOD
         complete = false;
         player.sendMessage(ChatColor.YELLOW + "You have 15 seconds to complete the CAPTCHA!");
-        player.sendMessage(ChatColor.YELLOW + "Your CAPTCHA ID number is: " + pUUID.uuid);
 
+        if(enterprisemode) {
+            player.sendMessage(ChatColor.YELLOW + "Your CAPTCHA ID number is: " + pUUID.uuid);
+        }
+
+        /*
+        int keyCode = k.getKeyCode();
+        if (keyCode == KeyEvent.VK_ESCAPE) {
+            kick.kick(player);
+        }
+
+        */
         new BukkitRunnable(){
             @Override
             public void run() {
